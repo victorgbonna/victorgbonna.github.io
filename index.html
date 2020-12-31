@@ -212,7 +212,7 @@
           ex_canvas.setAttribute('width', 900)
           ex_canvas.setAttribute('height', 120)
           var ctx= ex_canvas.getContext('2d')
-          ctx.drawImage(canvas,0,0, canvas.width, canvas.height, 0,0,70,70)
+          ctx.drawImage(canvas,0,0)
           var dataURL=ex_canvas.toDataURL()
           var img= document.createElement('img')
           img.setAttribute('src', dataURL)
