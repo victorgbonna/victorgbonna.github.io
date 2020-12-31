@@ -1,0 +1,202 @@
+<!doctype html>
+<html lang="en" style="scroll-behavior: smooth;">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>Hello, SMAN!</title>
+  </head>
+  <body>
+    <div class="container-fluid">
+        <nav class="navbar navbar-light bg-light">
+            <a class="navbar-brand" href="#">
+              <img src="logo.jpg" width="60" height="50" class="d-inline-block align-top" alt="">
+              SMAN IDcard creator
+            </a>
+          </nav>
+            <div class="jumbotron jumbotron-fluid">
+                <div class="container">
+                  <h1 class="display-4">Goodday, prestigious SMANites</h1>
+                  <p class="lead">if you are here, then you want to create your own personal SMAN(Stingy men association of nigeria) ID card. <br> Kindly input your stingy details below</p>
+                </div>
+            </div>
+            <form action="" class="text-center" id="IDForm">
+                <div class="form-group col-md-4 mx-auto">
+                <label for="inputAddress">NAME
+                </label>
+                <input type="text" class="form-control" id="inputAddress" placeholder="Don Jazzy" required name="name">
+                </div>
+                <div class="form-group col-md-4 mx-auto">
+                <label for="inputAddress2">POSITION</label>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Presido(PH Chapter)" required name="position">
+                </div>
+                <div class="form-group col-md-4 mx-auto">
+                    <label for="inputCity">BRANCH</label>
+                    <input type="text" class="form-control input-sm" id="inputCity" placeholder="RIVERS" required name="branch">
+                </div>
+                <div class="input-group col-md-4 mx-auto mb-4">
+                  <div class="custom-file">
+                      <input required type="file" class="custom-file-input" id="inputGroupFile" name="pic">
+                      <label for="inputGroupFile" class="custom-file-label">
+                          Choose photo
+                      </label>  
+                  </div>                    
+              </div>
+                <!-- <div class="form-group">
+                <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="gridCheck">
+                    <label class="form-check-label" for="gridCheck">
+                    Check me out
+                    </label>
+                </div>
+                </div> -->
+                <label for="inputCity" class="col-12">ID Style</label>
+                <div class="row mb-4" style="margin-left: 10%; margin-right: 10%; padding-left: 20%; padding-right: 20% ;" >
+                    <div class="form-check form-check-inline col-md-4 m-2 mx-auto">
+                        <input class="form-check-input" type="radio" name="style" id="inlineRadio3" value="#f97794and#623AA2" checked>
+                        <div class="redandblue" style="width: 100px; height: 100px; box-shadow: 0.5px 10px 5px #aaaaaa; background-image: linear-gradient(to bottom right, #f97794, #623AA2);"></div>
+                      </div>
+                      <div class="form-check form-check-inline col-md-4 m-2 mx-auto">
+                        <input class="form-check-input" type="radio" name="style" id="inlineRadio3" value=" #C2FFD8and#465EFB">
+                        <div class="whiteandblue" style="width: 100px; height: 100px; box-shadow: 0.5px 10px 5px #aaaaaa;background-image: linear-gradient( to bottom right, #C2FFD8, #465EFB);"></div>
+                      </div>
+                      <div class="form-check form-check-inline col-md-4 m-2 mx-auto">
+                        <input class="form-check-input" type="radio" name="style" id="inlineRadio3" value="#81FFEF 10%and#F067B4 100%">
+                        <div id="purple idstyle" style="width: 100px; height: 100px; box-shadow: 0.5px 10px 5px #aaaaaa;background-image: linear-gradient( to bottom right, #81FFEF 10%, #F067B4 100%);"></div>
+                      </div>
+                      <div class="form-check form-check-inline col-md-4 m-2 mx-auto" >
+                        <input class="form-check-input" type="radio" name="style" id="inlineRadio3" value="#FFF886 10%and#F072B6 100%">
+                        <div id="yellowandred idstyle" style="width: 100px; height: 100px; box-shadow: 0.5px 10px 5px #aaaaaa;background-image: linear-gradient( to bottom right, #FFF886 10%, #F072B6 100%);"></div>
+                      </div>
+                      <div class="form-check form-check-inline col-md-4 m-2 mx-auto">
+                        <input class="form-check-input" type="radio" name="style" id="inlineRadio3" value="#F05F57 10%and#360940 100%">
+                        <div id="greenandblue idstyle" style="width: 100px; height: 100px; box-shadow: 0.5px 10px 5px #aaaaaa;background-image: linear-gradient( to bottom right, #F05F57 10%, #360940 100%);"></div>
+                      </div>
+                      <div class="form-check form-check-inline col-md-4 m-2 mx-auto">
+                        <input class="form-check-input" type="radio" name="style" id="inlineRadio3" value=" #A0FE65 10%and#FA016D 100%">
+                        <div id="blueandpink idstyle" style="width: 100px; height: 100px; box-shadow: 0.5px 10px 5px #aaaaaa;background-image: linear-gradient( to bottom right, #A0FE65 10%, #FA016D 100%);"></div>
+                      </div>
+                </div>
+                
+                <div style="margin-bottom: 20px; height: 50px;" class="mx-4">
+                    <button type="submit" class="btn btn-success btn-lg text-center float-left" id="createButton">Create ID</button>
+                    <button type="button" class="btn btn-primary btn-lg text-center float-right" id="reviewButton">Preview ID</button>
+                </div>
+            </form>
+                <div id="card-show"  class="d-none col-md-4 offset-md-4 col-12 text-center" style="border-radius: 10px; font-family: Calibri, sans-serif; position: relative; height: 27 0px; margin-bottom: 20px; padding: 0 !important; box-shadow: 3px 2px 10px #aaaaaa;">
+                  <div style="width: 100%; height: 20%; padding-top: 20px;">
+                    <h4 style="color: rgb(38, 35, 35); font-weight: bold; margin-left: 2%; line-height: 2px;" class="d-none d-md-block">STINGY MEN ASSOCIATION</h4>
+                    <h5 style="color: rgb(38, 35, 35); font-weight: bold; margin-left: 10%; line-height: 2px;" class="d-md-none">STINGY MEN ASSOCIATION</h5>
+                    <small style="font-weight: 500;" class="text-right"><i><span>motto</span>: Let Me See What I Can Do.. </i></small>
+                  </div>
+                  <div style="width: 100%; height: 74%; padding: 0%; padding-top: 3%; " class="mt-1">
+                    <div class="row container mx-0" style="width: 100%; height: 100%;">
+                      
+                      <div class="col-5 p-1 col-md-4" style="border: 3px solid; width: 100%; height: 100%;" >
+                        <img class="mx-0" height="120px" width="100%" id="pic" src="#">
+                      </div>
+                      <div class="col-7 col-md-8">
+                        <h6><b>IDENTITY CARD</b></h6>
+                        <ul style="list-style-type: none;" class="text-left px-0">
+                          <li><b>NAME: </b><span id="name" style="font-size: 0.9em;">Greyhaired</span> </li>
+                          <li><b>POSITION: </b><span id="position" style="font-size: 0.9em;">minister of information</span> </li>
+                          <li><b>BRANCH: </b><span id="branch" style="font-size: 0.9em;">PH</span></li>
+                          <li><b>ID NO: </b><span id="idno" style="font-size: 0.9em;">12yhhwh22</span></li>
+                        </ul>
+                      </div>
+                    </div>  
+                  <div style="width: 100%; height: 8%;">
+                    <small class=""><i>Courtesy:IDCardcreator.com</i></small>
+                  </div>
+                  <div style="position: absolute; top:25%; bottom: 50%; left: 50%; "> <img src="logo.jpg" alt="" width="150px" height="120px" style="border-radius: 60px; opacity: 0.1;"></div>
+                  <div style="position: absolute; top:3px; bottom: 4px; left: 4px;"> <img src="logo.jpg" alt="" width="60px" height="60px" style="border-radius: 30px;"></div>
+                </div>
+          </div>
+          <div class=" col-md-4 offset-md-4 d-none" id="pledge" style="margin-bottom: 20px;">
+            <form action="" id="saveForm">
+              <h6><b>OATH</b></h6>
+              <input class="form-check-input" type="checkbox" required><p>I solemnly swear, to uphold the dignity of this great association with due diligence. To never give shishi by any means of financial exploitation to the other gender. To respect and uphold the constitution of thi great association. So help me God.</p>
+              <button type="submit" class="btn btn-success text-center" id="saveButton">Download ID</button>
+              
+            </form>          
+          </div>
+      </div>
+    <!-- Image and text -->
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/0.4.1/html2canvas.min.js" integrity="sha512-s/XK4vYVXTGeUSv4bRPOuxSDmDlTedEpMEcAQk0t/FMd9V6ft8iXdwSBxV0eD60c6w/tjotSlKu9J2AAW1ckTA==" crossorigin="anonymous"></script>
+    <script>
+      $('#inputGroupFile').on('change', function(){
+      var fileName= $(this).val();
+      $(this).next('.custom-file-label').html(fileName);
+      })
+      var img_div=document.getElementById('img_div')
+      var card=document.getElementById('card-show')
+      document.getElementsByName('pic')[0].addEventListener('change', function(e){
+        // img class="mx-0 " height="120px" width="100%" id="pic"
+        
+          var reader= new FileReader()
+          reader.onload=function(e){
+            card.querySelector('#pic').setAttribute('src',e.target.result) 
+            console.log(card.querySelector('#pic'))   
+          }
+          reader.readAsDataURL(e.target.files[0])
+        
+      })
+      var reviewButton=document.getElementById('reviewButton')
+      reviewButton.addEventListener('click',()=>{
+        var pledge=document.getElementById('pledge').classList.remove('d-none')
+        createId()
+        })
+      var idform=document.getElementById('IDForm')
+      idform.addEventListener('submit', function(e){
+        e.preventDefault()
+        createId()
+        var pledge=document.getElementById('pledge').classList.remove('d-none')
+      })
+      
+      function createId(){
+        var idname=document.getElementsByName('name')[0].value
+        var idposition=document.getElementsByName('position')[0].value
+        var idbranch=document.getElementsByName('branch')[0].value
+        var radios=document.getElementsByName('style')
+        var idpic=document.getElementsByName('pic')[0].value
+        var idstyle=[]
+        radios.forEach(radio => {
+          if(radio.checked){
+            console.log(radio.value)
+            idstyle=radio.value.split('and')
+            // console.log(idstyle)
+          }    
+        })
+        card.style.backgroundImage=`linear-gradient( to bottom right, ${idstyle[0]}, ${idstyle[1]})`
+        card.querySelector('#name').textContent=idname
+        card.querySelector('#position').textContent=idposition
+        // card.querySelector('#pic').setAttribute('src',idpic)
+        // card.querySelector('#pic').src=URL.createObjectURL(idpic)
+        card.querySelector('#branch').textContent=idbranch
+        card.querySelector('#idno').textContent='ID'+Math.floor(10000+Math.random()*900000)
+        card.classList.remove('d-none')
+        // window.scrollTop=window.scrollHeight
+        window.scrollTo(0,card.offsetTop+card.offsetHeight)
+      
+      }
+      var saveForm=document.getElementById('saveForm').addEventListener('submit',function(e){
+        e.preventDefault()
+        html2canvas(document.querySelector("#card-show"),{
+          onrendered: function(canvas) {
+          document.body.appendChild(canvas);
+        }})
+      })
+
+    </script>    
+  </body>
+</html>
