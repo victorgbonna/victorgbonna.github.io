@@ -203,40 +203,46 @@
         document.getElementById('viewportMeta').setAttribute('content', 'width=800')
         
         html2canvas(document.querySelector("#card-show",{
-          allowTaint:true
+          allowTaint:true,
+          width:900,
+          height:120
         })).then(canvas => {
-          saveAs(canvas.toDataURL(), 'smanID.png'); 
-          
-        }).then(function(){
-          document.getElementById('viewportMeta').setAttribute('content', vp)
+          console.log('sdone')
+          var ex_canvas=document.createElement('canvas')
+          ex_canvas.setAttribute('width', 900)
+          ex_canvas.setAttribute('height', 120)
+          var ctx= ex_canvas.getContext('2d')
+          ctx.drawImage(canvas,0,0, canvas.width, canvas.height, 0,0,70,70)
+          var dataURL=ex_canvas.toDataURL()
+          var img= document.createElement('img')
+          img.setAttribute('src', dataURL)
+          // saveAs(img.src, 'smanID.jpg');
+          var link = document.createElement('a');
 
-        });
+          if (typeof link.download === 'string') {
+
+            link.href = img.src;
+
+            link.download = 'smanId.jpg';
+
+            //Firefox requires the link to be in the body
+            link.appendChild(img)
+            document.body.appendChild(link)
+            console.log(img)
+            //simulate click
+            link.click();
+
+            //remove the link when done
+            // document.body.removeChild(link);
+
+          } else {
+
+            window.open(uri);
+
+          }
+          // document.body.appendChild(img);
+        })
       })
-      function saveAs(uri, filename) {
-
-        var link = document.createElement('a');
-
-        if (typeof link.download === 'string') {
-
-          link.href = uri;
-          console.log(uri,filename)
-          link.download = filename;
-
-          //Firefox requires the link to be in the body
-          document.body.appendChild(link);
-
-          //simulate click
-          link.click();
-
-          //remove the link when done
-          document.body.removeChild(link);
-
-        } else {
-
-          window.open(uri);
-
-        }
-      }
     </script>    
   </body>
 </html>
